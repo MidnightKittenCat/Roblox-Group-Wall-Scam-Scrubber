@@ -1,35 +1,53 @@
-# Roblox Group Wall Post Scam Detector
 
-This Python script identifies and removes potential scam posts from a Roblox group wall. It utilizes a pre-trained Support Vector Machine (SVM) model to classify post content as scam or not scam.
+## Roblox Group Wall Scam Detector
 
-**Requirements:**
+## Overview
 
-* Python 3.x
-* requests library
-* pandas library
-* scikit-learn library
-* joblib library
+This project fetches posts from a specified Roblox group's wall, classifies them using a pre-trained SVM model, and deletes posts identified as potential scams based on the classification results.
 
-**Instructions:**
+## Requirements
 
-1. Save the script as `roblox_group_scam_detector.py`.
-2. Replace the following placeholders with your own values:
-    * `ROBLOX_COOKIE`: Your Roblox security cookie.
-    * `GROUP_ID`: The ID of the Roblox group to monitor.
-3. Make sure you have trained and saved the TF-IDF vectorizer and SVM classifier models beforehand. The script expects them to be saved as `tfidf_vectorizer.joblib` and `svm_classifier.joblib`, respectively.
-4. Run the script from your terminal: `python roblox_group_scam_detector.py`
+- Python 3.x
+- Required Python packages (install using `pip install -r requirements.txt`):
+  - `joblib`
+  - `requests`
+  - `pandas`
+  - `scikit-learn`
 
-**How it Works:**
+## Setup
 
-1. The script first obtains a CSRF token from Roblox using a POST request.
-2. It then enters a loop that iterates through pages of group wall posts.
-3. For each post, the script preprocesses the content (converts it to lowercase) and uses the loaded vectorizer and SVM model to predict whether it's a scam or not.
-4. If the prediction is "scam" with a high confidence probability (above 0.9), the script attempts to delete the post and stores the preprocessed content in a list.
-5. The script continues iterating through pages until it reaches the maximum number of pages specified or encounters an error.
-6. Finally, it saves the list of suspected scam post content to a file named `scam_comments.txt`.
+1. Clone the repository and install dependencies:
 
-**Important Notes:**
+   ```bash
+   git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
+   cd your-repo
+   pip install -r requirements.txt
+   ```
 
-* This script leverages a pre-trained model for scam detection. The accuracy of the model depends on the training data used.
-* Modifying Roblox's website structure or authentication methods may break the script.
-* Use this script responsibly and ethically.
+2. Prepare the environment:
+    - Obtain a valid Roblox session cookie (`ROBLOX_COOKIE`) with necessary permissions.
+    - Update `GROUP_ID` with the target Roblox group ID.
+    - Ensure `tfidf_vectorizer.joblib` and `svm_classifier.joblib` are available in the project directory (download if necessary).
+
+## Usage
+
+Run the script `main.py` to execute the main functionality:
+
+```bash
+python main.py
+```
+
+## Files
+
+- `main.py`: Contains the main script to fetch group wall posts, classify them, and delete scam posts.
+- `tfidf_vectorizer.joblib`: Serialized TF-IDF vectorizer model.
+- `svm_classifier.joblib`: Serialized SVM classifier model.
+- `requirements.txt`: List of Python dependencies.
+
+## Contributing
+
+Contributions are welcome! If you find any issues or have suggestions, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
