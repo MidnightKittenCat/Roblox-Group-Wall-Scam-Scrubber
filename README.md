@@ -19,7 +19,7 @@ This project fetches posts from a specified Roblox group's wall, classifies them
 1. Clone the repository and install dependencies:
 
    ```bash
-   git clone [https://github.com/your-username/your-repo.git](https://github.com/your-username/your-repo.git)
+   git clone [https://github.com/MidnightKittenCat/Roblox-Group-Wall-Scam-Scrubber.git](https://github.com/MidnightKittenCat/Roblox-Group-Wall-Scam-Scrubber.git)
    cd your-repo
    pip install -r requirements.txt
    ```
