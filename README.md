@@ -50,4 +50,4 @@ The script will fetch posts from the specified Roblox group's wall, classify the
 
 ## Contributing
 
-Contributions to improve or extend the functionality of this project are welcome! If you encounter any issues or have suggestions for enhancements, please feel free to open an issue or submit a pull request on [GitHub](https://github.com/YourUsername/Roblox-Group-Wall-Scam-Detector).
+Contributions to improve or extend the functionality of this project are welcome! If you encounter any issues or have suggestions for enhancements, please feel free to open an issue or submit a pull request on [GitHub](https://github.com/MidnightKittenCat/Roblox-Group-Wall-Scam-Scrubber).
