@@ -1,0 +1,25 @@
+roblox:
+  cookie: 'YourRobloxCookieHere'
+  group_id: 123456
+
+fetching:
+  base_url: 'https://groups.roblox.com/v2/groups/{group_id}/wall/posts?SortOrder=Desc'
+  request_delay: 0.001
+  rate_limit_delay: 5
+  max_pages: 1250
+  starting_page: 1
+  batch_size: 10
+
+files:
+  scam_comments: 'scam_comments.txt'
+  tfidf_vectorizer: 'tfidf_vectorizer.joblib'
+  svm_classifier: 'svm_classifier.joblib'
+  best_params: 'best_params.joblib'
+
+classifier:
+  C: 1.0
+  kernel: 'linear'
+  probability: True
+
+performance:
+  log_interval: 10  # Log performance metrics every 10 iterations
