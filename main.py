@@ -73,8 +73,8 @@ def check_if_scam(post, vectorizer, svm_classifier):
     return prediction, probability, preprocessed_content
 
 # Load the saved models
-vectorizer = joblib.load('tfidf_vectorizer.joblib')
-svm_classifier = joblib.load('svm_classifier.joblib')
+vectorizer = joblib.load('./models/tfidf_vectorizer.joblib')
+svm_classifier = joblib.load('./modelsvm_classifier.joblib')
 
 # Obtain CSRF token
 csrf_token = get_csrf_token()
