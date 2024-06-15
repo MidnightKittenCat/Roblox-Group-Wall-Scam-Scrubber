@@ -1,5 +1,5 @@
-joblib
 requests
-pandas
+joblib
+pyyaml
 scikit-learn
-time
+psutil
